@@ -82,7 +82,7 @@ def run(path, out="results", device_gpu=False, max_rounds=2000):
     R = {"rows": {"train": len(tr), "val": len(va), "test": len(te)}, "fraud_rate": {"train": float(ytr.mean()), "val": float(yva.mean()), "test": float(yte.mean())}, "n_features": len(cols)}
     # --- baseline: logistic regression on a few numeric features ---
     base_cols = [c for c in ["log_amt", "hour", "dow", "uid_prev_n", "amt_vs_uid_mean"] if c in cols]
-    med = Xtr[base_cols].median(); lr = LogisticRegression(max_iter=300).fit(Xtr[base_cols].fillna(med), ytr)
+    med = Xtr[base_cols].median().fillna(0); lr = LogisticRegression(max_iter=300).fit(Xtr[base_cols].fillna(med), ytr)
     pb = lr.predict_proba(Xte[base_cols].fillna(med))[:, 1]
     R["baseline_logreg"] = {"roc_auc": roc_auc_score(yte, pb), "pr_auc": average_precision_score(yte, pb)}
     # --- LightGBM, early stopping on VALIDATION (never on test) ---

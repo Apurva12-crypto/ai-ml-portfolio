@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apurva Vatshya - AI/ML portfolio results</title>
+<style>
+:root{--bg:#fafaf8;--fg:#1d2330;--mut:#5b6475;--card:#fff;--line:#e3e5ea;--acc:#1f4fd8;--warn:#8a5a00;--warnbg:#fff6e0}
+@media(prefers-color-scheme:dark){:root{--bg:#12151c;--fg:#e8eaf0;--mut:#9aa3b5;--card:#1a1e28;--line:#2c3240;--acc:#7da2ff;--warn:#f0c36a;--warnbg:#2b2412}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:920px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:2rem;margin:0 0 4px}h2{font-size:1.35rem;margin:0 0 6px}h3{font-size:1rem;margin:18px 0 6px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+a{color:var(--acc)}p{margin:8px 0}.sub{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:22px 0}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin-right:6px;color:var(--mut)}
+.warn{background:var(--warnbg);color:var(--warn);border-radius:8px;padding:10px 14px;margin:12px 0;font-size:.95rem}
+table{border-collapse:collapse;width:100%;font-size:.93rem;margin:8px 0;display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--line);padding:6px 10px;text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}th{color:var(--mut);font-weight:600}
+ul{padding-left:20px;margin:6px 0}li{margin:3px 0}code{background:var(--line);padding:1px 5px;border-radius:4px;font-size:.88em}
+footer{color:var(--mut);font-size:.9rem;margin-top:36px}
+</style></head><body><main>
+<h1>AI/ML portfolio: four evidence projects</h1>
+<p class="sub">Apurva Vatshya. Every number on this page comes from a results file committed in the repository; nothing is quoted from memory. Source: <a href="https://github.com/Apurva12-crypto/ai-ml-portfolio">github.com/Apurva12-crypto/ai-ml-portfolio</a></p>
+<div class="warn"><b>Read this first.</b> Projects 1 and 4 use synthetic data that I generated, so they demonstrate method and engineering, not real-world accuracy. Project 2 has a complete pipeline but <b>no real-data result yet</b>. Only Project 3 uses real (simulated-by-NASA) benchmark data. This portfolio was built with AI assistance (Claude); I can walk through every design decision.</div>
+
+<section class="card" id="p3">
+<span class="tag">Real benchmark data</span><span class="tag">Time series</span>
+<h2>3. Remaining useful life on NASA C-MAPSS</h2>
+<p><b>Problem.</b> Predict how many cycles a turbofan engine has left, on all four C-MAPSS subsets (simulated engine data, not field data).</p>
+<p><b>Approach.</b> Gradient boosting on window features vs a 2-layer LSTM vs a small Transformer; RUL target capped at 125 cycles; per-operating-condition normalisation (FD002/FD004); validation split by engine; 3 seeds per deep model; last window per test engine (official protocol).</p>
+<h3>Test RMSE in cycles (3-seed ensembles), NASA score in brackets</h3>
+<table><tr><th>Subset</th><th>Train engines</th><th>GBM</th><th>LSTM</th><th>Transformer</th></tr>
+<tr><td>FD001</td><td>100</td><td>16.3 (565)</td><td>14.4 (418)</td><td>15.8 (530)</td></tr>
+<tr><td>FD002</td><td>260</td><td>17.1 (1581)</td><td>14.6 (1192)</td><td>14.6 (1118)</td></tr>
+<tr><td>FD003</td><td>100</td><td>16.5 (803)</td><td>13.3 (316)</td><td>14.9 (463)</td></tr>
+<tr><td>FD004</td><td>249</td><td>17.8 (1963)</td><td>14.9 (1205)</td><td>16.0 (1380)</td></tr></table>
+<h3>Leakage demonstration (same GBM, validation RMSE)</h3>
+<table><tr><th>Subset</th><th>Random window split</th><th>Engine-level split</th></tr>
+<tr><td>FD001</td><td>10.1</td><td>17.7</td></tr><tr><td>FD002</td><td>14.0</td><td>17.9</td></tr><tr><td>FD003</td><td>7.6</td><td>16.2</td></tr><tr><td>FD004</td><td>12.5</td><td>17.6</td></tr></table>
+<p>Random window splits make validation look far better than reality because neighbouring windows of one engine land on both sides.</p>
+<div class="warn"><b>Honest caveats.</b> Bootstrap intervals for LSTM vs Transformer overlap, so that comparison is not statistically clear (both beat the GBM baseline on RMSE in every subset). The seed-ensemble 80% interval covered only 19% to 44% of true values, so it is badly under-dispersed; conformal prediction is the next step. No hyperparameter search; not a state-of-the-art claim.</div>
+<p><a href="https://github.com/Apurva12-crypto/ai-ml-portfolio/tree/main/03_honeywell_rul">Code and knowledge base</a> | results: <code>03_honeywell_rul/results/metrics_FD00x.json</code></p>
+</section>
+
+<section class="card" id="p1">
+<span class="tag">Synthetic testbed</span><span class="tag">RAG / reliability</span>
+<h2>1. Self-auditing multi-hop retrieval with calibrated abstention</h2>
+<p><b>Problem.</b> Can a retrieval system know when it is failing? A synthetic corpus (1,846 documents, 2,400 two- and three-hop questions) has twin entities, relocated companies with conflicting dated facts, and typo or missing-initial name mentions.</p>
+<p><b>Approach.</b> Three retrieval paths (own BM25, an LSA dense index, an exact entity index), reciprocal rank fusion, cross-path agreement as confidence, and a logistic calibrator fit on 800 questions and evaluated on the other 1,600. The reader is rule-based and extractive, not an LLM.</p>
+<h3>Accuracy (world seed 0, K=3)</h3>
+<table><tr><th>System</th><th>Overall</th><th>Exact name</th><th>Typo</th><th>Twin-ambiguous</th></tr>
+<tr><td>BM25</td><td>0.897</td><td>1.000</td><td>0.704</td><td>0.449</td></tr>
+<tr><td>Dense (LSA)</td><td>0.654</td><td>0.805</td><td>0.352</td><td>0.331</td></tr>
+<tr><td>Fused (RRF)</td><td>0.893</td><td>1.000</td><td>0.654</td><td>0.472</td></tr></table>
+<h3>Calibration and abstention (fused, 1,600 test questions)</h3>
+<ul><li>Area under the risk-coverage curve: 0.0405 raw agreement to 0.0208 calibrated (0.041 to 0.049 raw vs 0.017 to 0.021 calibrated over three world seeds).</li>
+<li>ECE 0.038 to 0.028. Abstaining on 17.9% of questions raised accuracy on answered questions from 88.6% to 93.8%, avoiding 101 wrong answers at the cost of 186 correct ones.</li></ul>
+<div class="warn"><b>Honest caveats.</b> Fusion did <b>not</b> beat BM25 in any of the three seeds (fused 0.893 / 0.903 / 0.900 vs BM25 0.897 / 0.910 / 0.915), because the weak dense path adds noise. Abstention caught only 38% of twin-ambiguous questions. These numbers say nothing about LLM quality or real corpora (a HotpotQA notebook exists but has not been run).</div>
+<p><a href="https://github.com/Apurva12-crypto/ai-ml-portfolio/tree/main/01_auric_selfaudit_rag">Code and knowledge base</a> | results: <code>01_auric_selfaudit_rag/results/metrics.json</code></p>
+</section>
+
+<section class="card" id="p4">
+<span class="tag">Synthetic data</span><span class="tag">Data quality / evaluation</span><span class="tag">Live demo</span>
+<h2>4. PII detector and synthetic-data quality filters</h2>
+<p><b>Problem.</b> Detect and redact personal data reliably, and filter synthetic training data for defects.</p>
+<p><b>Approach.</b> Regex candidates, checksum validators (Luhn, Verhoeff for Aadhaar, SSN rules, IP octet ranges), same-clause context rules and overlap resolution; ablation on held-out templates. A second pipeline generates verifiable tasks, injects known defects and measures the filter stack.</p>
+<h3>Ablation on 1,500 held-out synthetic documents (5,002 gold spans)</h3>
+<table><tr><th>Stage</th><th>Precision</th><th>Recall</th><th>F1</th></tr>
+<tr><td>Regex only</td><td>0.694</td><td>0.700</td><td>0.697</td></tr>
+<tr><td>+ validators</td><td>0.897</td><td>0.700</td><td>0.786</td></tr>
+<tr><td>+ context rules</td><td>1.000</td><td>0.896</td><td>0.945</td></tr></table>
+<p>Quality filter (3,000 generated examples, 40% injected defects): every injected defect type was caught (recall 1.0) with zero false rejections of clean items.</p>
+<div class="warn"><b>Honest caveats.</b> All data is synthetic and the generator and detector share an author, so near-perfect structured-ID scores prove the method, not real-world accuracy. Name (PERSON) recall is only 0.653; production needs an NER model. The test set was reused twice during development and replaced each time with a fresh seed; earlier, lower scores are kept in <code>results/</code>. Injected defects are crisp, so the filter recall is an upper bound.</div>
+<p><b>Live demo:</b> <a href="https://pii-redaction-api.vercel.app/">pii-redaction-api.vercel.app</a> (health: <a href="https://pii-redaction-api.vercel.app/health">/health</a>, POST <code>/redact</code>). Please do not paste real personal data.</p>
+<p><a href="https://github.com/Apurva12-crypto/ai-ml-portfolio/tree/main/04_handshake_pii_synth">Code and knowledge base</a> | results: <code>04_handshake_pii_synth/results/</code></p>
+</section>
+
+<section class="card" id="p2">
+<span class="tag">Real-data run pending</span><span class="tag">Fraud / risk</span>
+<h2>2. Time-split fraud scoring (IEEE-CIS)</h2>
+<p><b>Problem.</b> Score card transactions for fraud without leaking future information, and choose a decision threshold by business cost.</p>
+<p><b>Approach.</b> Chronological train/validation/test split with a one-day embargo; past-only per-card features; LightGBM early-stopped on validation PR-AUC; isotonic calibration; threshold chosen on validation by minimising an illustrative cost function; SHAP reason codes; PSI and adversarial-validation drift checks.</p>
+<div class="warn"><b>No results are reported.</b> The pipeline is complete and covered by automated tests, but it has only been run on synthetic data with the IEEE-CIS schema, whose metrics are meaningless. The real run on the Kaggle IEEE-CIS data is pending, and this page will be updated with numbers from <code>results/metrics.json</code> only after that run.</div>
+<p>Known design weakness found during testing: expanding-window history features drift by construction; rolling windows are the planned fix.</p>
+<p><a href="https://github.com/Apurva12-crypto/ai-ml-portfolio/tree/main/02_paypal_fraud">Code and knowledge base</a></p>
+</section>
+
+<section class="card">
+<h2>How this was built</h2>
+<p>These projects were built with AI assistance (Claude). I use the knowledge base in each project folder to explain every design choice, and the repository includes small automated tests (<code>tests/</code> in each project) that check the leakage-safety logic, the metric code and consistency of the committed result files. Docker and Oracle deployment files were not tested; notebooks marked UNTESTED are templates.</p>
+</section>
+<footer>Last updated 2026-11-24. <a href="https://github.com/Apurva12-crypto/ai-ml-portfolio">Repository</a></footer>
+</main></body></html>

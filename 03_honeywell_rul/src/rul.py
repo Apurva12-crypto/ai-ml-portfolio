@@ -164,6 +164,6 @@ def run(ds, seeds=3, epochs=30, out="results"):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--ds", default="FD001")
-    ap.add_argument("--seeds", type=int, default=3); ap.add_argument("--epochs", type=int, default=30)
-    a = ap.parse_args(); os.makedirs("results", exist_ok=True)
-    print(json.dumps(run(a.ds, a.seeds, a.epochs), indent=1))
+    ap.add_argument("--seeds", type=int, default=3); ap.add_argument("--epochs", type=int, default=30); ap.add_argument("--out", default="results")
+    a = ap.parse_args(); os.makedirs(a.out, exist_ok=True)
+    print(json.dumps(run(a.ds, a.seeds, a.epochs, out=a.out), indent=1))

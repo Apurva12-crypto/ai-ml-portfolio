@@ -14,6 +14,13 @@ Built with AI assistance (Claude). Everything is original code. Public datasets 
 - `docker compose` and the Oracle deployment were not tested (no Docker daemon, no cloud login). See `deploy/ORACLE_DEPLOY.md`.
 - Never quote a number you did not produce or cannot reproduce.
 
+## Tests
+```bash
+pip install pytest
+python -m pytest -q 0*/tests   # about 1 minute; synthetic/smoke tests plus checks that committed results are self-consistent
+```
+Results page: `docs/index.html` (GitHub Pages). Live PII demo: https://pii-redaction-api.vercel.app/ (do not paste real personal data).
+
 ## Run
 ```bash
 pip install torch scikit-learn pandas numpy lightgbm shap faker fastapi uvicorn
