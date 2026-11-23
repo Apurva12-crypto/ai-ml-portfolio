@@ -1,0 +1,155 @@
+[
+ {
+  "q": "In which country is the company that employs Rikdor K. Braztav headquartered today?",
+  "gold": "Poltavia",
+  "trail": [
+   [
+    "employer",
+    "Rikdor K. Braztav",
+    "Telrik Systems"
+   ],
+   [
+    "hq",
+    "Telrik Systems",
+    "Lintelport"
+   ],
+   [
+    "country",
+    "Lintelport",
+    "Branrikia"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Monqui L. Vexbxan headquartered today?",
+  "gold": "Branrikia",
+  "trail": [
+   [
+    "employer",
+    "Monqui L. Vexbxan",
+    "Monqui Works"
+   ],
+   [
+    "hq",
+    "Monqui Works",
+    "Tavvexton"
+   ],
+   [
+    "country",
+    "Tavvexton",
+    "Vexostia"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Zentav H. Rixmi headquartered today?",
+  "gold": "Ostvexville",
+  "trail": [
+   [
+    "employer",
+    "Zentav H. Rixmi",
+    "Riktav Dynamics"
+   ],
+   [
+    "hq",
+    "Riktav Dynamics",
+    "Linrikburg"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Erifen S. Urzr headquartered today?",
+  "gold": "Rikvexburg",
+  "trail": [
+   [
+    "employer",
+    "Erifen S. Urzr",
+    "Arko Dynamics"
+   ],
+   [
+    "hq",
+    "Arko Dynamics",
+    "Galzenville"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Telpol Z. Rikzor headquartered today?",
+  "gold": "Samiburg",
+  "trail": [
+   [
+    "employer",
+    "Telpol Z. Rikzor",
+    "Urar Dynamics"
+   ],
+   [
+    "hq",
+    "Urar Dynamics",
+    "Erieriburg"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Erieri Quimon headquartered today?",
+  "gold": "Satavia",
+  "trail": [
+   [
+    "employer",
+    "Erieri Quimon",
+    "Tavlin Labs"
+   ],
+   [
+    "hq",
+    "Tavlin Labs",
+    "Brantelville"
+   ],
+   [
+    "country",
+    "Brantelville",
+    "Vexlinia"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Ostzen A. Zenvqx headquartered today?",
+  "gold": "Branrikia",
+  "trail": [
+   [
+    "employer",
+    "Ostzen A. Zenvqx",
+    "Quimon Systems"
+   ],
+   [
+    "hq",
+    "Quimon Systems",
+    "Vexarburg"
+   ],
+   [
+    "country",
+    "Vexarburg",
+    "Erigalia"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Miqui Kogal headquartered today?",
+  "gold": "Korikia",
+  "trail": [
+   [
+    "employer",
+    "Miqui Kogal",
+    "Zenpol Systems"
+   ],
+   [
+    "hq",
+    "Zenpol Systems",
+    "Branmiville"
+   ],
+   [
+    "country",
+    "Branmiville",
+    "Aruria"
+   ]
+  ]
+ }
+]

@@ -1,0 +1,212 @@
+[
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 37 days after the 28th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 5,
+  "response": "Counting 37 days from day 28 in a 30-day month and wrapping gives day 5. The answer is 5.",
+  "defect": null
+ },
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 30 days after the 17th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 17,
+  "response": "Counting 30 days from day 17 in a 30-day month and wrapping gives day 17. The answer is 17.",
+  "defect": null
+ },
+ {
+  "kind": "unit",
+  "prompt": "A trip is 96 kilometres long. How many metres is that?",
+  "answer": 96000,
+  "response": "One kilometre is 1000 metres, so 96 km is 96000 metres. The answer is 96000.",
+  "defect": null
+ },
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 42 days after the 20th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 2,
+  "response": "Counting 42 days from day 20 in a 30-day month and wrapping gives day 2. The answer is 2.",
+  "defect": null
+ },
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 30 days after the 21th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 21,
+  "response": "Counting 30 days from day 21 in a 30-day month and wrapping gives day 21. The answer is 21.",
+  "defect": null
+ },
+ {
+  "kind": "unit",
+  "prompt": "A trip is 9 kilometres long. How many metres is that?",
+  "answer": 9000,
+  "response": "One kilometre is 1000 metres, so 9 km is 9000 metres. The answer is 9000.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 6 boxes with 2 pens each, then adds 29 loose pens. How many pens in total?",
+  "answer": 41,
+  "response": "Each box has 2 pens, so 6 boxes hold 12 pens. Adding 29 loose pens gives 41 pens in total. The answer is 41.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 32 boxes with 7 pens each, then adds 61 loose pens. How many pens in total?",
+  "answer": 285,
+  "response": "Each box has 7 pens, so 32 boxes hold 224 pens. Adding 61 loose pens gives 285 pens in total. The answer is 285.",
+  "defect": null
+ },
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 43 days after the 9th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 22,
+  "response": "Counting 43 days from day 9 in a 30-day month and wrapping gives day 22. The answer is 22.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 19 boxes with 7 pens each, then adds 34 loose pens. How many pens in total?",
+  "answer": 167,
+  "response": "Each box has 7 pens, so 19 boxes hold 133 pens. Adding 34 loose pens gives 167 pens in total. The answer is 167.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 7 boxes with 11 pens each, then adds 18 loose pens. How many pens in total?",
+  "answer": 95,
+  "response": "Each box has 11 pens, so 7 boxes hold 77 pens. Adding 18 loose pens gives 95 pens in total. The answer is 95.",
+  "defect": null
+ },
+ {
+  "kind": "pct",
+  "prompt": "What is 40% of 80?",
+  "answer": 32,
+  "response": "40% means 40/100, so 40/100 times 80 equals 32. The answer is 32.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 16 boxes with 5 pens each, then adds 11 loose pens. How many pens in total?",
+  "answer": 91,
+  "response": "Each box has 5 pens, so 16 boxes hold 80 pens. Adding 11 loose pens gives 91 pens in total. The answer is 91.",
+  "defect": null
+ },
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 28 days after the 3th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 1,
+  "response": "Counting 28 days from day 3 in a 30-day month and wrapping gives day 1. The answer is 1.",
+  "defect": null
+ },
+ {
+  "kind": "unit",
+  "prompt": "A trip is 216 kilometres long. How many metres is that?",
+  "answer": 216000,
+  "response": "One kilometre is 1000 metres, so 216 km is 216000 metres. The answer is 216000.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 16 boxes with 4 pens each, then adds 55 loose pens. How many pens in total?",
+  "answer": 119,
+  "response": "Each box has 4 pens, so 16 boxes hold 64 pens. Adding 55 loose pens gives 119 pens in total. The answer is 119.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 5 boxes with 4 pens each, then adds 32 loose pens. How many pens in total?",
+  "answer": 52,
+  "response": "Each box has 4 pens, so 5 boxes hold 20 pens. Adding 32 loose pens gives 52 pens in total. The answer is 52.",
+  "defect": null
+ },
+ {
+  "kind": "pct",
+  "prompt": "What is 25% of 500?",
+  "answer": 125,
+  "response": "25% means 25/100, so 25/100 times 500 equals 125. The answer is 125.",
+  "defect": null
+ },
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 38 days after the 5th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 13,
+  "response": "Counting 38 days from day 5 in a 30-day month and wrapping gives day 13. The answer is 13.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 11 boxes with 5 pens each, then adds 66 loose pens. How many pens in total?",
+  "answer": 121,
+  "response": "Each box has 5 pens, so 11 boxes hold 55 pens. Adding 66 loose pens gives 121 pens in total. The answer is 121.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 20 boxes with 5 pens each, then adds 31 loose pens. How many pens in total?",
+  "answer": 131,
+  "response": "Each box has 5 pens, so 20 boxes hold 100 pens. Adding 31 loose pens gives 131 pens in total. The answer is 131.",
+  "defect": null
+ },
+ {
+  "kind": "unit",
+  "prompt": "A trip is 19 kilometres long. How many metres is that?",
+  "answer": 19000,
+  "response": "One kilometre is 1000 metres, so 19 km is 19000 metres. The answer is 19000.",
+  "defect": null
+ },
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 36 days after the 12th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 18,
+  "response": "Counting 36 days from day 12 in a 30-day month and wrapping gives day 18. The answer is 18.",
+  "defect": null
+ },
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 3 days after the 28th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 1,
+  "response": "Counting 3 days from day 28 in a 30-day month and wrapping gives day 1. The answer is 1.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 10 boxes with 6 pens each, then adds 58 loose pens. How many pens in total?",
+  "answer": 118,
+  "response": "Each box has 6 pens, so 10 boxes hold 60 pens. Adding 58 loose pens gives 118 pens in total. The answer is 118.",
+  "defect": null
+ },
+ {
+  "kind": "date",
+  "prompt": "A parcel ships 39 days after the 15th of a 30-day month. On which day of the month does it ship if the month wraps around?",
+  "answer": 24,
+  "response": "Counting 39 days from day 15 in a 30-day month and wrapping gives day 24. The answer is 24.",
+  "defect": null
+ },
+ {
+  "kind": "arith",
+  "prompt": "A shop sells 17 boxes with 3 pens each, then adds 68 loose pens. How many pens in total?",
+  "answer": 119,
+  "response": "Each box has 3 pens, so 17 boxes hold 51 pens. Adding 68 loose pens gives 119 pens in total. The answer is 119.",
+  "defect": null
+ },
+ {
+  "kind": "unit",
+  "prompt": "A trip is 177 kilometres long. How many metres is that?",
+  "answer": 177000,
+  "response": "One kilometre is 1000 metres, so 177 km is 177000 metres. The answer is 177000.",
+  "defect": null
+ },
+ {
+  "kind": "pct",
+  "prompt": "What is 20% of 80?",
+  "answer": 16,
+  "response": "20% means 20/100, so 20/100 times 80 equals 16. The answer is 16.",
+  "defect": null
+ },
+ {
+  "kind": "unit",
+  "prompt": "A trip is 209 kilometres long. How many metres is that?",
+  "answer": 209000,
+  "response": "One kilometre is 1000 metres, so 209 km is 209000 metres. The answer is 209000.",
+  "defect": null
+ }
+]

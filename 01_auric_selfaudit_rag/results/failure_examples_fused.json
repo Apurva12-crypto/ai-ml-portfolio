@@ -1,0 +1,155 @@
+[
+ {
+  "q": "In which city is the company that employs Monrik N. xiar headquartered today?",
+  "gold": "Galbranville",
+  "trail": [
+   [
+    "employer",
+    "Monrik N. xiar",
+    "Quiur Dynamics"
+   ],
+   [
+    "hq",
+    "Quiur Dynamics",
+    "Braneriton"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Zenpol E. Monxol headquartered today?",
+  "gold": "Ostkoia",
+  "trail": [
+   [
+    "employer",
+    "Zenpol E. Monxol",
+    "Zenpol Works"
+   ],
+   [
+    "hq",
+    "Zenpol Works",
+    "Erivexport"
+   ],
+   [
+    "country",
+    "Erivexport",
+    "Polquiia"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Zentav J. Oytdor headquartered today?",
+  "gold": "Monzenburg",
+  "trail": [
+   [
+    "employer",
+    "Zentav J. Oytdor",
+    "Polrik Systems"
+   ],
+   [
+    "hq",
+    "Polrik Systems",
+    "Galrikton"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Sabran D. Kodoz headquartered today?",
+  "gold": "Branfenia",
+  "trail": [
+   [
+    "employer",
+    "Sabran D. Kodoz",
+    "Urar Systems"
+   ],
+   [
+    "hq",
+    "Urar Systems",
+    "Branurport"
+   ],
+   [
+    "country",
+    "Branurport",
+    "Monfenia"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Quisa K. Vexbraz headquartered today?",
+  "gold": "Dorurport",
+  "trail": [
+   [
+    "employer",
+    "Quisa K. Vexbraz",
+    "Sasa Systems"
+   ],
+   [
+    "hq",
+    "Sasa Systems",
+    "Galbranville"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Safen N. Erylin headquartered today?",
+  "gold": "Polquiia",
+  "trail": [
+   [
+    "employer",
+    "Safen N. Erylin",
+    "Riksa Works"
+   ],
+   [
+    "hq",
+    "Riksa Works",
+    "Mifenport"
+   ],
+   [
+    "country",
+    "Mifenport",
+    "Vexbrania"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Teldor Vexpol headquartered today?",
+  "gold": "Vexbrania",
+  "trail": [
+   [
+    "employer",
+    "Teldor Vexpol",
+    "Polur Systems"
+   ],
+   [
+    "hq",
+    "Polur Systems",
+    "Linurton"
+   ],
+   [
+    "country",
+    "Linurton",
+    "Poltavia"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Mitel Quiko headquartered today?",
+  "gold": "Poltavia",
+  "trail": [
+   [
+    "employer",
+    "Mitel Quiko",
+    "Sasa Systems"
+   ],
+   [
+    "hq",
+    "Sasa Systems",
+    "Galbranville"
+   ],
+   [
+    "country",
+    "Galbranville",
+    "Monfenia"
+   ]
+  ]
+ }
+]

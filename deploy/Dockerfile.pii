@@ -1,0 +1,8 @@
+FROM python:3.11-slim
+WORKDIR /srv
+RUN pip install --no-cache-dir fastapi uvicorn faker
+COPY 04_handshake_pii_synth/src ./04_handshake_pii_synth/src
+COPY 04_handshake_pii_synth/app ./04_handshake_pii_synth/app
+WORKDIR /srv/04_handshake_pii_synth
+EXPOSE 8000
+CMD ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8000"]

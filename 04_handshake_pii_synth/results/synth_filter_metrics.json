@@ -1,0 +1,39 @@
+{
+ "n": 3000,
+ "defect_rate": 0.4,
+ "clean_examples": 1800,
+ "clean_rejected": 0,
+ "false_reject_rate": 0.0,
+ "per_defect_recall": {
+  "wrong_answer": 1.0,
+  "truncated": 1.0,
+  "pii_leak": 1.0,
+  "off_topic": 1.0,
+  "duplicate": 1.0
+ },
+ "false_flags_on_clean_by_reason": {},
+ "flags_fired_per_injected_defect": {
+  "wrong_answer": {
+   "wrong_answer": 253
+  },
+  "truncated": {
+   "truncated": 214,
+   "off_topic": 7
+  },
+  "pii_leak": {
+   "pii_leak": 263
+  },
+  "off_topic": {
+   "truncated": 229,
+   "off_topic": 229,
+   "duplicate": 48
+  },
+  "duplicate": {
+   "duplicate": 241
+  }
+ },
+ "defective_examples_that_survived": 0,
+ "kept": 1800,
+ "kept_defect_rate": 0.0,
+ "note": "Synthetic defect-injection benchmark; defects are simple and independent, so recall here is an upper bound on real-world performance."
+}

@@ -1,0 +1,120 @@
+{
+ "n_test_docs": 1500,
+ "n_gold_spans": 4985,
+ "ablation_micro": {
+  "regex_only": {
+   "precision": 0.7,
+   "recall": 0.699,
+   "f1": 0.7,
+   "tp": 3485,
+   "fp": 1494,
+   "fn": 1500
+  },
+  "regex+validators": {
+   "precision": 0.905,
+   "recall": 0.699,
+   "f1": 0.789,
+   "tp": 3485,
+   "fp": 365,
+   "fn": 1500
+  },
+  "regex+validators+context": {
+   "precision": 0.93,
+   "recall": 0.849,
+   "f1": 0.888,
+   "tp": 4234,
+   "fp": 321,
+   "fn": 751
+  }
+ },
+ "full_per_entity_heldout_templates": {
+  "CREDIT_CARD": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 480,
+   "fp": 0,
+   "fn": 0
+  },
+  "DATE_OF_BIRTH": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 525,
+   "fp": 0,
+   "fn": 0
+  },
+  "EMAIL": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 450,
+   "fp": 0,
+   "fn": 0
+  },
+  "IN_AADHAAR": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 268,
+   "fp": 0,
+   "fn": 0
+  },
+  "IN_PAN": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 262,
+   "fp": 0,
+   "fn": 0
+  },
+  "IP_ADDRESS": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 223,
+   "fp": 0,
+   "fn": 0
+  },
+  "PERSON": {
+   "precision": 0.734,
+   "recall": 0.499,
+   "f1": 0.594,
+   "tp": 749,
+   "fp": 272,
+   "fn": 751
+  },
+  "PHONE": {
+   "precision": 0.954,
+   "recall": 1.0,
+   "f1": 0.976,
+   "tp": 1014,
+   "fp": 49,
+   "fn": 0
+  },
+  "US_SSN": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 263,
+   "fp": 0,
+   "fn": 0
+  },
+  "MICRO": {
+   "precision": 0.93,
+   "recall": 0.849,
+   "f1": 0.888,
+   "tp": 4234,
+   "fp": 321,
+   "fn": 751
+  }
+ },
+ "dev_micro": {
+  "precision": 0.989,
+  "recall": 0.902,
+  "f1": 0.944,
+  "tp": 1083,
+  "fp": 12,
+  "fn": 117
+ }
+}

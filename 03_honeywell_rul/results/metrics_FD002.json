@@ -1,0 +1,40 @@
+{
+ "dataset": "FD002",
+ "n_train_engines": 260,
+ "n_features": 17,
+ "window": 30,
+ "rul_cap": 125,
+ "models": {
+  "gbm_baseline": {
+   "test_rmse": 17.145349800978035,
+   "test_nasa_score": 1580.869987741918
+  },
+  "lstm": {
+   "test_rmse": 14.594034194946289,
+   "test_nasa_score": 1191.6728515625,
+   "rmse_per_seed": [
+    14.910143852233887,
+    16.36040496826172,
+    14.514899253845215
+   ],
+   "ens_interval80_coverage": 0.21235521235521235,
+   "mean_ens_std": 3.5566065311431885
+  },
+  "transformer": {
+   "test_rmse": 14.615409851074219,
+   "test_nasa_score": 1118.053466796875,
+   "rmse_per_seed": [
+    15.477598190307617,
+    15.875521659851074,
+    16.096500396728516
+   ],
+   "ens_interval80_coverage": 0.4362934362934363,
+   "mean_ens_std": 5.239441394805908
+  }
+ },
+ "leakage_demo": {
+  "val_rmse_random_window_split": 14.002285475124523,
+  "val_rmse_engine_split": 17.913224544267802
+ },
+ "seconds": 937.5
+}

@@ -1,0 +1,140 @@
+[
+ {
+  "q": "In which city is the company that employs Vexko J. Zenqin headquartered today?",
+  "gold": "Galarport",
+  "trail": [
+   [
+    "employer",
+    "Vexko J. Zenqin",
+    "Dorfen Works"
+   ],
+   [
+    "hq",
+    "Dorfen Works",
+    "Quiostport"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Tavko Telgal headquartered today?",
+  "gold": "Tavrikia",
+  "trail": [
+   [
+    "employer",
+    "Tavko Telgal",
+    "Koost Dynamics"
+   ],
+   [
+    "hq",
+    "Koost Dynamics",
+    "Quirikport"
+   ],
+   [
+    "country",
+    "Quirikport",
+    "Zenaria"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Lingal W. ziar headquartered today?",
+  "gold": "Saeriport",
+  "trail": [
+   [
+    "employer",
+    "Lingal W. ziar",
+    "Sapol Systems"
+   ],
+   [
+    "hq",
+    "Sapol Systems",
+    "Quilinton"
+   ]
+  ]
+ },
+ {
+  "q": "In which country is the company that employs Arost Sagal headquartered today?",
+  "gold": "Tavrikia",
+  "trail": [
+   [
+    "employer",
+    "Arost Sagal",
+    "Mipol Labs"
+   ],
+   [
+    "hq",
+    "Mipol Labs",
+    "Fentelburg"
+   ],
+   [
+    "country",
+    "Fentelburg",
+    "Erimonia"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Rikpol C. Zezur headquartered today?",
+  "gold": "Sasaville",
+  "trail": [
+   [
+    "employer",
+    "Rikpol C. Zezur",
+    "Ostar Labs"
+   ],
+   [
+    "hq",
+    "Ostar Labs",
+    "Fenmonville"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Galfen Branqui headquartered today?",
+  "gold": "Osttavville",
+  "trail": [
+   [
+    "employer",
+    "Galfen Branqui",
+    "Urfen Labs"
+   ],
+   [
+    "hq",
+    "Urfen Labs",
+    "Telsaton"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Koost Z. Uqsa headquartered today?",
+  "gold": "Mimiburg",
+  "trail": [
+   [
+    "employer",
+    "Koost Z. Uqsa",
+    "Vexzen Dynamics"
+   ],
+   [
+    "hq",
+    "Vexzen Dynamics",
+    "Sasaville"
+   ]
+  ]
+ },
+ {
+  "q": "In which city is the company that employs Arlin A. Vexay headquartered today?",
+  "gold": "Teleriburg",
+  "trail": [
+   [
+    "employer",
+    "Arlin A. Vexay",
+    "Monzen Dynamics"
+   ],
+   [
+    "hq",
+    "Monzen Dynamics",
+    "Kourton"
+   ]
+  ]
+ }
+]

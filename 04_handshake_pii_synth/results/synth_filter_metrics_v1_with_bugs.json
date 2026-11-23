@@ -1,0 +1,19 @@
+{
+ "n": 3000,
+ "defect_rate": 0.4,
+ "clean_examples": 1800,
+ "clean_rejected": 0,
+ "false_reject_rate": 0.0,
+ "per_defect_recall": {
+  "wrong_answer": 1.0,
+  "truncated": 1.0,
+  "pii_leak": 1.0,
+  "off_topic": 0.0,
+  "duplicate": 0.734
+ },
+ "false_flags_on_clean_by_reason": {},
+ "defective_examples_that_survived": 64,
+ "kept": 1864,
+ "kept_defect_rate": 0.0343,
+ "note": "Synthetic defect-injection benchmark; defects are simple and independent, so recall here is an upper bound on real-world performance."
+}

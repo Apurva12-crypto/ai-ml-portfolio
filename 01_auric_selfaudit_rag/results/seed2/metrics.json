@@ -1,0 +1,62 @@
+{
+ "K": 3,
+ "n_docs": 1855,
+ "n_people": 1500,
+ "systems": {
+  "bm25": {
+   "accuracy": 0.915,
+   "acc_2hop": 0.8988,
+   "acc_3hop": 0.9301,
+   "acc_relocated_companies": 0.9033,
+   "acc_exact_name": 1.0,
+   "acc_typo_name": 0.7455,
+   "acc_twin_ambiguous_name": 0.5474
+  },
+  "dense": {
+   "accuracy": 0.6508,
+   "acc_2hop": 0.6254,
+   "acc_3hop": 0.6744,
+   "acc_relocated_companies": 0.8051,
+   "acc_exact_name": 0.8046,
+   "acc_typo_name": 0.3195,
+   "acc_twin_ambiguous_name": 0.3578
+  },
+  "fused": {
+   "accuracy": 0.8996,
+   "acc_2hop": 0.8884,
+   "acc_3hop": 0.91,
+   "acc_relocated_companies": 0.889,
+   "acc_exact_name": 1.0,
+   "acc_typo_name": 0.6312,
+   "acc_twin_ambiguous_name": 0.5733
+  }
+ },
+ "calibration_abstention_fused": {
+  "test_n": 1600,
+  "test_accuracy": 0.8962,
+  "ECE_raw_agreement": 0.0283,
+  "ECE_calibrated": 0.0215,
+  "AURC_raw": 0.0427,
+  "AURC_calibrated": 0.0173,
+  "selective_accuracy_at_coverage": {
+   "1.0": 0.8962,
+   "0.9": 0.9285,
+   "0.8": 0.9609,
+   "0.7": 0.9884,
+   "0.6": 1.0
+  },
+  "abstain_threshold_from_dev": 0.7306416133978185,
+  "abstain_rate_test": 0.165,
+  "accuracy_on_answered": 0.9461,
+  "wrong_answers_avoided": 94,
+  "correct_answers_lost": 170,
+  "abstain_rate_on_twin_ambiguous": 0.3036,
+  "abstain_rate_on_exact_name": 0.0
+ },
+ "hop_evidence_recall_by_path": {
+  "bm25": 0.8625,
+  "dense": 0.7823,
+  "graph": 0.8625
+ },
+ "note": "Synthetic testbed built to isolate retriever failure modes (twin entities, relocated companies). Reader is extractive/rule-based; numbers say nothing about LLM quality or real corpora."
+}

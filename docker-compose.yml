@@ -1,0 +1,9 @@
+services:
+  pii:
+    build: {context: ., dockerfile: deploy/Dockerfile.pii}
+    ports: ["8000:8000"]
+    restart: unless-stopped
+  fraud:
+    build: {context: ., dockerfile: deploy/Dockerfile.fraud}
+    ports: ["8001:8001"]
+    restart: unless-stopped
